@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM Merchandise</title>
+    <!--<link rel="icon" href="./logo/icon.jpg">-->
+</head>
+<body>
+
+    <div class='menu'>
+        <input class='alignRight mainFont button' type="button" value="CHECK OUT" onclick="toLocation('checkout');">
+    </div>
+
+    <div class='center intro' id='main-section'>
+        <p class='mainFont fontItalic white'><br><br><br><br><br><br><br><br>New Releases</p>
+        <input class='center mainFont button' type="button" value="SHOP NOW >" onclick="toLocation('shop');">
+    </div>
+
+    <!--TITLE-->
+    <div class='center width750'>
+        <h1 class='mainFont titleFont font40'>DREAM SMILE MUG</h1>
+    </div>
+    <div class='center hline'></div>
+
+    <div class='center width750 twoColumn'><!--TWO COLUMN-->
+    <!--PRODUCT IMAGE-->
+    <div>
+        <img class='center productImage' src='https://cdn.shopify.com/s/files/1/0502/6421/1616/products/Black-Metal-Eyelet-Bucket-Hat---Big-Accesories-SMILE_5000x.png?'>
+    </div>
+    <!--PRODUCT INFO-->
+    <div>
+        <p class='mainFont fontItalic'>$17.00</p>
+        <input class='center mainFont button' type="button" value="PURCHASE" onclick="toLocation('purchase');">
+        <p class='mainFont'><br>Bucket o' dream.<br><br>High quality custom embroidery.
+            One Size Fits Most: 7 1/2 - 7 5/8.
+            100% bio-washed chino twill.
+            3 1/2" crown.
+            Sewn eyelets. The black bucket cap has metal eyelets and slightly thicker feel.</p>
+    </div>
+    </div><!--END TWO COLUMN-->
+
+    <p class='copyright center mainFont'>©copyright 2020 DREAM Merchandise
+        <br>2200 Winter Springs Blvd
+        <br>Ste #106-234
+        <br>Oviedo, FL 32765
+    </p>
+
+<script>
+    function toLocation(theURL) {
+        if (theURL == 'shop'){
+        location.href = "./index.html"; 
+    }
+        if (theURL == 'checkout'){
+        location.href = "./checkout.html";
+    }
+        if (theURL == 'purchase'){
+        localStorage.setItem("purchase", "DREAM SMILE BUCKET CAP");
+        localStorage.setItem("price", "17.00");
+        location.href = "./checkout.html";
+    }
+}
+</script>
+    
+<style>
+body, html
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.menu
+{
+    position: fixed;
+    max-height: 50pt;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+}
+.menuImage
+{
+    max-height: 50pt;
+}
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignRight
+{
+    float: right;
+}
+.width750
+{
+    width: 95%;
+    max-width: 750pt;
+    background-color: white;
+}
+.logo
+{
+    width: 50%;
+    max-width: 300pt;
+}
+.mainFont
+{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    color: black;
+}
+.titleFont
+{
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+}
+.font40
+{
+    font-size: 40pt;
+}
+.fontItalic
+{
+    font-size: 24pt;
+    text-align: center;
+    font-style: italic;
+}
+.white
+{
+    color: rgb(255,255,255);
+}
+.button
+{
+    height: 40pt;
+    width: 150pt;
+    max-width: 200pt;
+    background-color: rgb(157, 255, 0);
+    border: 0;
+}
+.productImage
+{
+    max-width: 480pt;
+    max-height: 480pt;
+}
+.twoColumn
+{
+    padding: 25pt;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+}
+.hline 
+{
+    margin-top: 25pt;
+    margin-bottom: 25;
+    border-top: 2px  solid rgb(200,200,200);
+    width: 750pt;
+}
+.copyright
+{
+    font-size: 11pt;
+    padding: 50pt;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+.aboutus
+{
+    width: 100%;
+    background-color: rgb(237,237,237);
+}
+.intro
+{
+    background-image: url("https://cdn.shopify.com/s/files/1/0502/6421/1616/files/Top_Sellers-V3.1-Lime_Shapes-D_2x_46c9c313-64e0-4e14-8477-def071d8e33c_2000x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50pt;
+}
+</style>
+    
+</body>
+    </html>

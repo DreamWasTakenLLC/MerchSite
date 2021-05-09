@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM Merchandise</title>
+    <!--<link rel="icon" href="./logo/icon.jpg">-->
+</head>
+<body>
+
+    <div class='menu'>
+        <input class='alignRight mainFont button' type="button" value="CHECK OUT" onclick="toLocation('checkout');">
+    </div>
+
+    <div class='center intro' id='main-section'>
+        <p class='mainFont fontItalic white'><br><br><br><br><br><br><br><br>New Releases</p>
+        <input class='center mainFont button' type="button" value="SHOP NOW >" onclick="toLocation('shop');">
+    </div>
+
+    <!--PRODUCT INFO-->
+    <div class="width500 center">
+        <p><br></p>
+        <span class='mainFont' id='purchase'></span>
+        <span class='mainFont'>--</span>
+        <span class='mainFont' id='price'></span>
+    </div>
+    <div class='center hline'></div>
+    <p><br><br></p>
+
+    <!--CONTACT + SHIPPING-->
+    <div class="width500 center">
+        <h1 class='mainFont titleFont'>Contact Information</h1>
+        <input type='text' value='phone number' class='formtext' id='phone'></input>
+        <h1 class='mainFont titleFont'>Shipping Address</h1>
+        <input type='text' value='Full name' class='formtext' id='fname'></input>
+        <input type='text' value='Address' class='formtext' id='address'></input>
+        <input type='text' value='Apt, suite (optional)' class='formtext' id='address2'></input>
+        <input type='text' value='City' class='formtext' id='city'></input>
+        <input type='text' value='State' class='formtext' id='state'></input>
+        <input type='text' value='ZIP code' class='formtext' id='zip'></input>
+        <p><br><br></p>
+        <input class='formtext center mainFont button' type="button" value="countine to payment" onclick="toLocation('payment');">
+    </div>
+    <p><br><br></p>
+
+    <p class='copyright center mainFont'>©copyright 2020 DREAM Merchandise
+        <br>2200 Winter Springs Blvd
+        <br>Ste #106-234
+        <br>Oviedo, FL 32765
+    </p>
+
+<script>
+    window.onload = function(){
+        document.getElementById('purchase').innerHTML = localStorage.getItem("purchase");
+        document.getElementById('price').innerHTML = localStorage.getItem("price");
+    }
+
+    function toLocation(theURL) {
+        if (theURL == 'shop'){
+        location.href = "./index.html"; 
+    }
+        if (theURL == 'checkout'){
+        location.href = "./checkout.html";
+    }
+        if (theURL == 'payment'){
+        localStorage.setItem("phone", document.getElementById('phone').value);
+        localStorage.setItem("fname", document.getElementById('fname').value);
+        localStorage.setItem("address", document.getElementById('address').value);
+        localStorage.setItem("address2", document.getElementById('address2').value);
+        localStorage.setItem("city", document.getElementById('city').value);
+        localStorage.setItem("state", document.getElementById('state').value);
+        localStorage.setItem("zip", document.getElementById('zip').value);
+        location.href = "./payment.html";
+    }
+}
+</script>
+    
+<style>
+body, html
+{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.menu
+{
+    position: fixed;
+    max-height: 50pt;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+}
+.menuImage
+{
+    max-height: 50pt;
+}
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.alignRight
+{
+    float: right;
+}
+.width750
+{
+    width: 95%;
+    max-width: 750pt;
+    background-color: white;
+}
+.width500
+{
+    width: 95%;
+    max-width: 500pt;
+    background-color: white;
+}
+.logo
+{
+    width: 50%;
+    max-width: 300pt;
+}
+.mainFont
+{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    color: black;
+}
+.titleFont
+{
+    font-size: 20pt;
+    text-align: center;
+    font-weight: bold;
+}
+.font40
+{
+    font-size: 40pt;
+}
+.fontItalic
+{
+    font-size: 24pt;
+    text-align: center;
+    font-style: italic;
+}
+.white
+{
+    color: rgb(255,255,255);
+}
+.button
+{
+    height: 40pt;
+    width: 150pt;
+    max-width: 200pt;
+    background-color: rgb(157, 255, 0);
+    border: 0;
+}
+.productImage
+{
+    max-width: 300pt;
+    max-height: 300pt;
+    opacity: 0.7;
+}
+.productImage:hover
+{
+    opacity: 1.0;
+}
+.twoColumn
+{
+    padding: 25pt;
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+}
+.hline 
+{
+    margin-top: 25pt;
+    margin-bottom: 25;
+    border-top: 2px  solid rgb(200,200,200);
+    width: 750pt;
+}
+.copyright
+{
+    font-size: 11pt;
+    padding: 50pt;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+.aboutus
+{
+    width: 100%;
+    background-color: rgb(237,237,237);
+}
+.intro
+{
+    background-image: url("https://cdn.shopify.com/s/files/1/0502/6421/1616/files/Top_Sellers-V3.1-Lime_Shapes-D_2x_46c9c313-64e0-4e14-8477-def071d8e33c_2000x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50pt;
+}
+.formtext
+{
+    margin-top: 5pt;
+    width: 100%;
+    height: 25pt;
+}
+</style>
+    
+</body>
+    </html>
